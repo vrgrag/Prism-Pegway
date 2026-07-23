@@ -68,10 +68,9 @@ class LevelSelectScreen extends StatelessWidget {
                               : () {
                                   AudioManager.instance.playSfx(Sfx.click);
                                   Haptics.selection();
-                                  Navigator.of(context).push(
-                                    prismRoute(
-                                      GameplayScreen(levelId: level.id),
-                                    ),
+                                  NavGuard.push(
+                                    context,
+                                    GameplayScreen(levelId: level.id),
                                   );
                                 },
                         );

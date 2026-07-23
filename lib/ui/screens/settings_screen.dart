@@ -165,26 +165,23 @@ class SettingsScreen extends StatelessWidget {
                         _LinkRow(
                           label: 'Privacy Policy',
                           icon: Icons.privacy_tip_rounded,
-                          onTap: () => Navigator.of(context).push(
-                            prismRoute(
-                              const WebViewScreen(
-                                title: 'Privacy Policy',
-                                url:
-                                    'https://prismpegway.com/privacy-policy.html',
-                                whiteBackground: true,
-                              ),
+                          onTap: () => NavGuard.push(
+                            context,
+                            const WebViewScreen(
+                              title: 'Privacy Policy',
+                              url: 'https://prismpegway.com/privacy-policy.html',
+                              whiteBackground: true,
                             ),
                           ),
                         ),
                         _LinkRow(
                           label: 'Support',
                           icon: Icons.support_agent_rounded,
-                          onTap: () => Navigator.of(context).push(
-                            prismRoute(
-                              const WebViewScreen(
-                                title: 'Support',
-                                url: 'https://prismpegway.com/support.html',
-                              ),
+                          onTap: () => NavGuard.push(
+                            context,
+                            const WebViewScreen(
+                              title: 'Support',
+                              url: 'https://prismpegway.com/support.html',
                             ),
                           ),
                         ),

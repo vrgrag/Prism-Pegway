@@ -50,9 +50,8 @@ class MainMenuScreen extends StatelessWidget {
                 NeonButton(
                   label: 'Play',
                   icon: Icons.play_arrow_rounded,
-                  onTap: () => Navigator.of(
-                    context,
-                  ).push(prismRoute(const LevelSelectScreen())),
+                  onTap: () =>
+                      NavGuard.push(context, const LevelSelectScreen()),
                 ),
                 const SizedBox(height: 14),
                 Row(
@@ -62,9 +61,8 @@ class MainMenuScreen extends StatelessWidget {
                         icon: Icons.emoji_events_rounded,
                         label: 'Daily',
                         color: PrismColors.amber,
-                        onTap: () => Navigator.of(
-                          context,
-                        ).push(prismRoute(const DailyChallengesScreen())),
+                        onTap: () =>
+                            NavGuard.push(context, const DailyChallengesScreen()),
                       ),
                     ),
                     const SizedBox(width: 14),
@@ -73,9 +71,7 @@ class MainMenuScreen extends StatelessWidget {
                         icon: Icons.blur_circular_rounded,
                         label: 'Skins',
                         color: PrismColors.magenta,
-                        onTap: () => Navigator.of(
-                          context,
-                        ).push(prismRoute(const SkinsScreen())),
+                        onTap: () => NavGuard.push(context, const SkinsScreen()),
                       ),
                     ),
                   ],
@@ -88,9 +84,8 @@ class MainMenuScreen extends StatelessWidget {
                         icon: Icons.school_rounded,
                         label: 'How to Play',
                         color: PrismColors.cyan,
-                        onTap: () => Navigator.of(
-                          context,
-                        ).push(prismRoute(const HowToPlayScreen())),
+                        onTap: () =>
+                            NavGuard.push(context, const HowToPlayScreen()),
                       ),
                     ),
                     const SizedBox(width: 14),
@@ -99,9 +94,8 @@ class MainMenuScreen extends StatelessWidget {
                         icon: Icons.settings_rounded,
                         label: 'Settings',
                         color: PrismColors.blue,
-                        onTap: () => Navigator.of(
-                          context,
-                        ).push(prismRoute(const SettingsScreen())),
+                        onTap: () =>
+                            NavGuard.push(context, const SettingsScreen()),
                       ),
                     ),
                   ],
@@ -114,9 +108,8 @@ class MainMenuScreen extends StatelessWidget {
                         icon: Icons.emoji_events_rounded,
                         label: 'Achievements',
                         color: PrismColors.green,
-                        onTap: () => Navigator.of(
-                          context,
-                        ).push(prismRoute(const AchievementsScreen())),
+                        onTap: () =>
+                            NavGuard.push(context, const AchievementsScreen()),
                       ),
                     ),
                     const SizedBox(width: 14),
@@ -125,18 +118,12 @@ class MainMenuScreen extends StatelessWidget {
                         icon: Icons.auto_stories_rounded,
                         label: 'Codex',
                         color: PrismColors.violet,
-                        onTap: () => Navigator.of(
-                          context,
-                        ).push(prismRoute(const CodexScreen())),
+                        onTap: () => NavGuard.push(context, const CodexScreen()),
                       ),
                     ),
                   ],
                 ),
                 const Spacer(flex: 1),
-                Text(
-                  'v1.0.0  •  com.prismpegway.pegwaygame',
-                  style: PrismText.body(11, color: PrismColors.textDim),
-                ),
                 const SizedBox(height: 12),
               ],
             ),

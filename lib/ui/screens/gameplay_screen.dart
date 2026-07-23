@@ -216,9 +216,7 @@ class _GameplayScreenState extends State<GameplayScreen>
       _goMenu();
       return;
     }
-    Navigator.of(
-      context,
-    ).pushReplacement(prismRoute(GameplayScreen(levelId: nextId)));
+    NavGuard.pushReplacement(context, GameplayScreen(levelId: nextId));
   }
 
   Future<void> _handleBack() async {
@@ -274,9 +272,8 @@ class _GameplayScreenState extends State<GameplayScreen>
               PauseOverlay(
                 onResume: _resume,
                 onRestart: _restart,
-                onHowToPlay: () => Navigator.of(
-                  context,
-                ).push(prismRoute(const HowToPlayScreen())),
+                onHowToPlay: () =>
+                    NavGuard.push(context, const HowToPlayScreen()),
                 onMenu: _goMenu,
               ),
             if (!_paused && controller.phase == GamePhase.won) _buildComplete(),
